@@ -1,0 +1,25 @@
+Hello,
+
+I want to ask you to make some changes for GPS-tracker, I will pay for that.
+
+1. Please fix language bug
+
+
+2. Make a dialog popup if application is started for the first time, there should be written "Read this before use - http://gps-server.net/blackberry"
+
+
+3. If user checked "Enable tracking" and clicked "Save" - tracking works. After user restarts phone and starts application from menu "Enable tracking" is checked, but tracking is not starting. You have to uncheck "Enable tracking", check it again and then click "Save", after that tracking will start.
+
+
+Application tracking behavoir should be like this:
+
+If "Enable tracking" = true Then
+	If "application gui allready running" = true Then
+		Application starts tracking
+	End if
+
+	If "User runs application from menu after phone restart or if application is not started" = true Then
+		Application starts tracking
+	End if
+End if
+
